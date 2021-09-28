@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         val request = NewsService.buildService(NewsInterface::class.java)
         val call = request.getNews("apple", "ru", "RU", "RU:ru")
 
-
         call.enqueue(
             object : Callback<DataNews> {
                 override fun onResponse(call: Call<DataNews>, response: Response<DataNews>) {
